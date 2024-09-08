@@ -1,0 +1,26 @@
+<div class="quiz-list-container">
+  <h3>Explore Our Quizzes!</h3>
+
+  @for (quiz of quizList; track $index) {
+  <div class="quiz-card">
+    <div class="quiz-thumbnail">Q1</div>
+    <div class="quiz-content">
+      <h2 class="quiz-title">{{ quiz.name }}</h2>
+      <p class="quiz-description">
+        {{ quiz.description }}
+      </p>
+      <div class="action-buttons">
+        <button class="icon-button" title="Play Quiz">
+          <i class="material-icons">play_arrow</i>
+        </button>
+        <button class="icon-button" title="Share Quiz">
+          <i class="material-icons">share</i>
+        </button>
+        <button class="icon-button" title="Bookmark Quiz">
+          <i class="material-icons">bookmark</i>
+        </button>
+      </div>
+    </div>
+  </div>
+  }
+</div>
