@@ -1,82 +1,14 @@
-@use "../../../../scss/variables";
-
 .quiz-list-container {
   max-width: 900px;
   margin: auto;
-}
 
-h3 {
-  text-align: center;
-  color: #424242;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
-.quiz-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: variables.$card-shadow;
-  margin-bottom: 24px;
-  padding: 16px;
-  display: flex;
-  align-items: center;
-  transition: box-shadow 0.3s ease-in-out;
-
-  &:hover {
-    box-shadow: variables.$card-shadow-hover;
-  }
-
-  .quiz-thumbnail {
-    flex-shrink: 0;
-    width: 90px;
-    height: 90px;
-    background-color: #e0e0e0;
-    border-radius: 6px;
-    margin-right: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-    color: #757575;
-  }
-
-  .quiz-content {
-    flex-grow: 1;
-
-    .quiz-title {
-      font-size: 1.3em;
-      font-weight: 600;
-      color: variables.$text-dark;
-      margin: 0;
-    }
-
-    .quiz-description {
-      margin: 8px 0;
-      color: variables.$text-dark;
-      font-size: 0.95em;
+  c-card {
+    &:hover {
+      box-shadow: var(--cui-box-shadow);
     }
   }
 
-  .action-buttons {
-    text-align: right;
-
-    button.icon-button {
-      background: none;
-      border: none;
-      color: variables.$primary-color;
-      padding: 8px;
-      font-size: 20px;
-      cursor: pointer;
-      border-radius: 50%;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: rgba(13, 71, 161, 0.1); // light hover effect
-      }
-    }
-
-    button.icon-button i {
-      font-size: 24px;
-    }
+  .preview-span {
+    height: 150px;
   }
 }

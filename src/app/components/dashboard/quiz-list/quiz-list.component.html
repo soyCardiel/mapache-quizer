@@ -1,26 +1,31 @@
 <div class="quiz-list-container">
-  <h3>Explore Our Quizzes!</h3>
+  <c-navbar>
+    <c-container fluid>
+      <div cNavbarBrand class="h3">Explore your quizes</div>
+    </c-container>
+  </c-navbar>
 
-  @for (quiz of quizList; track $index) {
-  <div class="quiz-card">
-    <div class="quiz-thumbnail">Q1</div>
-    <div class="quiz-content">
-      <h2 class="quiz-title">{{ quiz.name }}</h2>
-      <p class="quiz-description">
-        {{ quiz.description }}
-      </p>
-      <div class="action-buttons">
-        <button class="icon-button" title="Play Quiz">
-          <i class="material-icons">play_arrow</i>
-        </button>
-        <button class="icon-button" title="Share Quiz">
-          <i class="material-icons">share</i>
-        </button>
-        <button class="icon-button" title="Bookmark Quiz">
-          <i class="material-icons">bookmark</i>
-        </button>
-      </div>
-    </div>
-  </div>
-  }
+  <c-container fluid>
+    <c-row>
+      @for (quiz of quizList; track $index) {
+      <c-col xs="1" md="2" lg="4">
+        <c-card class="mb-3">
+          <div cCardImg="top" class="preview-span bg-light"></div>
+
+          <c-card-body>
+            <h5 cCardTitle>{{ quiz.name }}</h5>
+            <p cCardText>
+              {{ quiz.description }}
+            </p>
+            <p cCardText>
+              <small class="text-medium-emphasis">
+                {{ quiz.created | date }}
+              </small>
+            </p>
+          </c-card-body>
+        </c-card>
+      </c-col>
+      }
+    </c-row>
+  </c-container>
 </div>
